@@ -49,7 +49,7 @@ public abstract class ActionUtils {
 	}
 	@PreDestroy
 	private void preDestroy() {
-		logger.info("********** end action " + getClass().getName() + " **********");
+		//logger.info("********** end action " + getClass().getName() + " **********");
 	}
 
 	/**
