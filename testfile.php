@@ -138,15 +138,10 @@ class ControllerSellerSeller extends Controller {
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('seller/seller');
-		
-		//$this->load->model('seller/design');
-		
-		//$this->load->model('seller/seller_product');
 
 		if (isset($this->request->post['selected']) && $this->validateDelete()) {
 			foreach ($this->request->post['selected'] as $seller_id) {
 				$this->model_seller_seller->deleteSeller($seller_id);
-				//$this->model_seller_design->getDesigns($data);
 			}
 
 			$this->session->data['success'] = $this->language->get('text_success');
